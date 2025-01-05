@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Переводчик</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Переводчик</h1>
+
+        <div class="translation-container">
+            <div class="input-section">
+                <select id="sourceLang">
+                    <option value="русский">Русский</option>
+                    <option value="английский">Английский</option>
+                </select>
+                <textarea id="sourceText" placeholder="Введите текст для перевода..."></textarea>
+            </div>
+
+            <div class="controls">
+                <select id="translationStyle">
+                    <option value="formal">Формальный</option>
+                    <option value="informal">Неформальный</option>
+                    <option value="business_email">Деловое письмо</option>
+                    <option value="flirty">Игривый</option>
+                </select>
+                <button id="translateBtn">Перевести</button>
+            </div>
+
+            <div class="output-section">
+                <select id="targetLang">
+                    <option value="английский">Английский</option>
+                    <option value="русский">Русский</option>
+                </select>
+                <textarea id="targetText" readonly placeholder="Перевод появится здесь..."></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
